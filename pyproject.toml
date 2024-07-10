@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "cw-5"
+version = "0.1.0"
+description = ""
+authors = ["Valeriya Ryabkova <larioja0531@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cw_5"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+prettytable = "^3.10.0"
+python-dotenv = "^1.0.1"
+psycopg2 = "^2.9.9"
+tqdm = "^4.66.4"
+
+[tool.poetry.scripts]
+search-employers = "cw_5.cli.search_employers:run"
+init = "cw_5.cli.init_db:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
